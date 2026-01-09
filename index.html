@@ -9,125 +9,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <title>SK Builders</title>
     <style>
       @font-face {
         font-family: "Satoshi";
-        src: url(./fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Black.woff2);
+        src: url(./fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff2)
+          format("woff2");
+        font-weight: 500;
+        font-style: normal;
+      } /* TODO Hint v. Tom: Musste den font-face vor den anderen platzieren, weil wegen des fehlenden font-weight bei den nachfolgenden, der Fonts nicht korrekt geladen werden konnten. */
+      @font-face {
+        font-family: "Satoshi";
+        src: url(./fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff2)
+          format("woff2"); /* TODO Tom@Dominik: Korrektur: Hier war ein kleiner Fehler im Pfad: "Gruppenarbeit_20260102" war eine Ebene zu viel. */
+        font-weight: 700;
+        font-style: normal;
       }
       @font-face {
         font-family: "Satoshi";
-        src: url(./fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff2);
+        src: url(./fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Black.woff2)
+          format("woff2");
+        font-weight: 900;
+        font-style: normal;
       }
     </style>
   </head>
-  <body class="font-[Satoshi]">
-    <header class="relative overflow-hidden bg-[#1D4734]">
-      <!-- Left: Logo -->
-      <div
-        class="relative mx-auto flex max-w-400 items-center justify-between px-6 py-6">
-        <div class="flex items-center gap-2">
-          <img src="media/SK_builders_logo.png" alt="SK Builders Logo" />
-          <a class="flex items-center text-white">
-            <span class="text-xl font-semibold tracking-wide">SK BUILDERS</span>
-          </a>
-        </div>
-        <!-- Center: Pill nav -->
-        <nav class="hidden md:block">
-          <div
-            class="rounded-full bg-white/90 px-3 py-2 shadow-sm ring-1 ring-black/10">
-            <ul
-              class="flex items-center gap-2 text-sm font-medium text-black/80">
-              <li>
-                <a
-                  class="rounded-full border border-black/20 bg-white px-5 py-2 text-black shadow-sm"
-                  href="#">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a class="rounded-full px-4 py-2 hover:bg-black/5" href="#"
-                  >Properties</a
-                >
-              </li>
-              <li>
-                <a
-                  class="flex items-center gap-1 rounded-full px-4 py-2 hover:bg-black/5"
-                  href="#">
-                  Buy
-                  <svg
-                    class="h-4 w-4 opacity-60"
-                    viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="flex items-center gap-1 rounded-full px-4 py-2 hover:bg-black/5"
-                  href="#">
-                  Sell
-                  <svg
-                    class="h-4 w-4 opacity-60"
-                    viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="flex items-center gap-1 rounded-full px-4 py-2 hover:bg-black/5"
-                  href="#">
-                  Rent
-                  <svg
-                    class="h-4 w-4 opacity-60"
-                    viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <!-- Right: Actions -->
-        <div class="flex items-center gap-3">
-          <div
-            class="rounded-full bg-white/90 p-1 shadow-sm ring-1 ring-black/10">
-            <a
-              href="#"
-              class="inline-flex items-center rounded-full px-5 py-2 text-sm font-medium text-black">
-              Login
-            </a>
-            <a
-              href="#"
-              class="inline-flex items-center rounded-full bg-[#1D4734] px-5 py-2 text-sm font-semibold text-white">
-              Get started
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
+  <body>
     <section class="relative z-0 bg-[#1D4734]">
       <div class="mx-auto max-w-7xl px-6 pt-24 pb-32">
         <!-- Hero Content -->
         <div class="relative z-10 max-w-6xl">
           <!-- Headline -->
           <h1
-            class="uppercase font-black text-white leading-[0.92] tracking-[0.06em] text-[clamp(52px,6vw,110px)]">
+            class="uppercase font-black text-white leading-[0.92] tracking-[0.06em] text-[clamp(52px,6vw,110px)]"
+          >
             <span class="block">EXPERIENCE THE</span>
             <span class="block">
               EPITOME OF
@@ -143,7 +60,8 @@
 
           <!-- Paragraph -->
           <p
-            class="font-[Plus_Jakarta_Sans] text-white/60 mt-6 max-w-100 text-[20px] leading-relaxed tracking-[0.015em] text-justify">
+            class="font-[Plus_Jakarta_Sans] text-white/60 mt-6 max-w-100 text-[20px] leading-relaxed tracking-[0.015em] text-justify"
+          >
             Our international brand specializes in property appraisal, sales,
             purchases, and investments. Trust us to deliver exceptional service
             and help you find your perfect real estate opportunity.
@@ -155,15 +73,18 @@
               <defs>
                 <path
                   id="circlePath"
-                  d="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" />
+                  d="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
+                />
               </defs>
 
               <text
-                class="font-[Plus_Jakarta_Sans] fill-white/70 text-[22spx] tracking-[0.45em] uppercase">
+                class="font-[Plus_Jakarta_Sans] fill-white/70 text-[22spx] tracking-[0.45em] uppercase"
+              >
                 <textPath
                   href="#circlePath"
                   startOffset="50%"
-                  text-anchor="middle">
+                  text-anchor="middle"
+                >
                   THE BEST PROPERTY PLATFORM
                 </textPath>
               </text>
@@ -171,39 +92,43 @@
             <img
               src="./media/Star 4.png"
               alt="Star"
-              class="absolute inset-0 m-auto w-10 h-10" />
+              class="absolute inset-0 m-auto w-10 h-10"
+            />
           </div>
         </div>
         <!-- Hero Image -->
         <div class="relative inset-0 -z-0 -translate-y-105 translate-x-15">
           <div
             class="z-10 opacity-80 rotate-[5.5deg] relative ml-auto w-full max-w-[790px] h-[440px] rounded-[216px] shadow-2xl bg-cover bg-center"
-            style="
-              background-image: url(./media/garden_with_pergula.jpg);
-            ">
+            style="background-image: url(./media/garden_with_pergula.jpg)"
+          >
             <div
-              class="absolute inset-0 z-0 translate-y-10 rounded-[216px] bg-black/20"></div>
+              class="absolute inset-0 z-0 translate-y-10 rounded-[216px] bg-black/20"
+            ></div>
           </div>
           <button
-            class="absolute z-10 -right-6 top-11 -translate-y-1/2 w-40 h-40 rounded-full bg-[#E09B6B] flex items-center justify-center shadow-lg">
+            class="absolute z-10 -right-6 top-11 -translate-y-1/2 w-40 h-40 rounded-full bg-[#E09B6B] flex items-center justify-center shadow-lg"
+          >
             <svg viewBox="0 0 24 24" class="w-30 h-30 text-black">
               <path
                 d="M7 17L17 7M18 7H7M17 7V17"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2" />
+                stroke-width="2"
+              />
             </svg>
           </button>
         </div>
       </div>
     </section>
-     <!-- ===================== -->
+    <!-- ===================== -->
     <!-- DEIN TEIL: BLACK SECTION -->
     <!-- ===================== -->
     <section class="relative overflow-hidden bg-[#0A0A0A]">
       <!-- subtle background glow (very close to screenshot vibe) -->
       <div
-        class="pointer-events-none absolute -left-40 top-0 h-[520px] w-[520px] rounded-full bg-white/5 blur-3xl"></div>
+        class="pointer-events-none absolute -left-40 top-0 h-[520px] w-[520px] rounded-full bg-white/5 blur-3xl"
+      ></div>
 
       <div class="mx-auto max-w-7xl px-6 pt-28 pb-24">
         <!-- Top content (2 columns) -->
@@ -216,22 +141,26 @@
                 <img
                   src="icons_forms/circleLabel_Ellipse_4.svg"
                   alt=""
-                  class="absolute inset-0 h-full w-full opacity-70" />
+                  class="absolute inset-0 h-full w-full opacity-70"
+                />
                 <img
                   src="icons_forms/circleLabel_Ellipse_3.svg"
                   alt=""
-                  class="absolute inset-0 h-full w-full opacity-35" />
+                  class="absolute inset-0 h-full w-full opacity-35"
+                />
                 <img
                   src="icons_forms/circleLabel_Star_3.svg"
                   alt=""
-                  class="absolute left-1 top-1 h-4 w-4" />
+                  class="absolute left-1 top-1 h-4 w-4"
+                />
               </div>
 
               <span class="text-[20px] font-semibold text-white">About Us</span>
             </div>
 
             <p
-              class="mt-16 max-w-[260px] font-[Plus_Jakarta_Sans] text-[12px] leading-[1.7] text-white/55">
+              class="mt-16 max-w-[260px] font-[Plus_Jakarta_Sans] text-[12px] leading-[1.7] text-white/55"
+            >
               We take great pride in ensuring the satisfaction of our customers.
               That's why we proudly guarantee the quality and reliability of our
               products.
@@ -239,7 +168,8 @@
 
             <a
               href="#"
-              class="mt-8 inline-flex items-center justify-center rounded-full bg-[#E09B6B] px-8 py-3 text-[12px] font-semibold text-black">
+              class="mt-8 inline-flex items-center justify-center rounded-full bg-[#E09B6B] px-8 py-3 text-[12px] font-semibold text-black"
+            >
               Get Started
             </a>
           </div>
@@ -247,7 +177,8 @@
           <!-- Right block -->
           <div class="col-span-12 md:col-span-8">
             <h2
-              class="max-w-[760px] text-[clamp(42px,4.6vw,72px)] font-black uppercase leading-[0.95] tracking-[0.01em] text-white">
+              class="max-w-[760px] text-[clamp(42px,4.6vw,72px)] font-black uppercase leading-[0.95] tracking-[0.01em] text-white"
+            >
               WE'VE FOUND
               <span class="text-white/50">LUXURY</span><br />
               HOMES FOR
@@ -256,11 +187,12 @@
             </h2>
 
             <p
-              class="mt-6 max-w-[520px] font-[Plus_Jakarta_Sans] text-[12px] leading-[1.7] text-white/50">
+              class="mt-6 max-w-[520px] font-[Plus_Jakarta_Sans] text-[12px] leading-[1.7] text-white/50"
+            >
               We take great pride in ensuring the satisfaction of our customers,
               which is why we guarantee that the products we sell will bring
-              happiness to each and every customer. Our genuine care for customer
-              satisfaction is what sets us apart.
+              happiness to each and every customer. Our genuine care for
+              customer satisfaction is what sets us apart.
             </p>
 
             <div class="mt-14 flex flex-wrap gap-x-20 gap-y-10">
@@ -271,7 +203,8 @@
                   <span class="text-[28px] font-bold text-[#E09B6B]">+</span>
                 </div>
                 <div
-                  class="mt-2 font-[Plus_Jakarta_Sans] text-[12px] text-white/55">
+                  class="mt-2 font-[Plus_Jakarta_Sans] text-[12px] text-white/55"
+                >
                   Awards Gained
                 </div>
               </div>
@@ -283,7 +216,8 @@
                   <span class="text-[28px] font-bold text-[#E09B6B]">+</span>
                 </div>
                 <div
-                  class="mt-2 font-[Plus_Jakarta_Sans] text-[12px] text-white/55">
+                  class="mt-2 font-[Plus_Jakarta_Sans] text-[12px] text-white/55"
+                >
                   Years of Experience
                 </div>
               </div>
@@ -295,7 +229,8 @@
                   <span class="text-[28px] font-bold text-[#E09B6B]">+</span>
                 </div>
                 <div
-                  class="mt-2 font-[Plus_Jakarta_Sans] text-[12px] text-white/55">
+                  class="mt-2 font-[Plus_Jakarta_Sans] text-[12px] text-white/55"
+                >
                   Rented Home Stay
                 </div>
               </div>
@@ -307,23 +242,27 @@
         <div class="relative mt-24">
           <!-- soft shadow behind -->
           <div
-            class="pointer-events-none absolute left-1/2 top-10 h-[420px] w-[min(1100px,92vw)] -translate-x-1/2 rounded-[999px] bg-black/60 blur-2xl"></div>
+            class="pointer-events-none absolute left-1/2 top-10 h-[420px] w-[min(1100px,92vw)] -translate-x-1/2 rounded-[999px] bg-black/60 blur-2xl"
+          ></div>
 
           <div
             class="relative mx-auto h-[420px] w-[min(1100px,92vw)] overflow-hidden rounded-[999px] bg-cover bg-center shadow-2xl"
-            style="background-image: url('media/garden_with_pergula.jpg')">
+            style="background-image: url('media/garden_with_pergula.jpg')"
+          >
             <!-- slight dark overlay like screenshot -->
             <div class="absolute inset-0 bg-black/10"></div>
 
             <!-- play button -->
             <button
               class="absolute left-1/2 top-1/2 z-10 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg"
-              aria-label="Play">
+              aria-label="Play"
+            >
               <svg
                 viewBox="0 0 24 24"
                 class="ml-1 h-6 w-6 text-black"
                 fill="currentColor"
-                aria-hidden="true">
+                aria-hidden="true"
+              >
                 <path d="M8 5v14l11-7z"></path>
               </svg>
             </button>
@@ -331,13 +270,265 @@
 
           <!-- DREAM HOUSE text overlay -->
           <div
-            class="pointer-events-none absolute left-1/2 -translate-x-1/2 -bottom-10 text-center uppercase tracking-[0.12em] text-[clamp(46px,6vw,84px)] font-light text-white/90">
+            class="pointer-events-none absolute left-1/2 -translate-x-1/2 -bottom-10 text-center uppercase tracking-[0.12em] text-[clamp(46px,6vw,84px)] font-light text-white/90"
+          >
             DREAM HOUSE
           </div>
         </div>
       </div>
     </section>
-  </body>
-</html>
+    <!-- The Project -->
+    <section
+      class="relative bg-[#1D4734] text-white p-8 flex flex-row gap-8 mx-auto w-[1600px] h-[991.11px]"
+    >
+      <div
+        id="divProjectHeader"
+        class="relative w-[1422.33px] h-[122.22px] opacity-[1] top-[88.89px] left-[88.89px] flex justify-between items-center"
+      >
+        <div
+          id="divLogoUndProject"
+          class="flex relative items-center gap-[26.67px] w-[378px] h-[122px] opacity-100"
+        >
+          <div id="divLogo" class="relative w-[122.22px] h-[122.22px]">
+            <img
+              src="./icons_forms/circleLabel_Ellipse_3.svg"
+              alt="Ellipse-3"
+              class="absolute top-[11.11px] left-0 w-[111.11px] h-[111.11px]"
+            />
+            <img
+              src="./icons_forms/circleLabel_Ellipse_4.svg"
+              alt="Ellipse-4"
+              class="absolute top-0 left-[11.11px] w-[111.11px] h-[111.11px]"
+            />
+            <img
+              src="./icons_forms/circleLabel_Star_3.svg"
+              alt="Stern-in-Ellipsen"
+              class="absolute top-[8.89px] left-[8.89px] w-[27.88px] h-[28.21px]"
+            />
+          </div>
+          <div
+            id="divProject"
+            class="font-[Satoshi] font-medium text-[44.44px] leading-[120%] tracking-[0px] text-center"
+          >
+            The Project
+          </div>
+        </div>
+        <div
+          id="divProjectDescription"
+          class="w-[480px] text-left font-medium text-[20px] leading-[150%] tracking-[0px]"
+        >
+          Together, we can conquer challenges, utilize our strengths, and
+          achieve remarkable success in this ambitious home project.
+        </div>
+      </div>
+      <figure class="absolute top-[288.89px] left-[72.77px]">
+        <!-- BEGIN: SVG-Trapezbild mit abgerundeten Ecken (leicht entfernbar) -->
+        <svg
+          width="1454.46"
+          height="451.11"
+          viewBox="0 0 1454.46 451.11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="display: block"
+        >
+          <defs>
+            <clipPath id="trapez-rounded">
+              <!-- Trapez mit abgerundeten Ecken: Die Werte können bei Bedarf noch feiner angepasst werden -->
+              <path
+                d="M 120 20 Q 40 20 40 100 L 20 351.11 Q 20 431.11 100 431.11 L 1354.46 431.11 Q 1434.46 431.11 1434.46 351.11 L 1414.46 100 Q 1414.46 20 1334.46 20 Z"
+              />
+            </clipPath>
+          </defs>
+          <image
+            href="./media/modern-villa-with-pool-and-deck.jpg"
+            width="1454.46"
+            height="451.11"
+            clip-path="url(#trapez-rounded)"
+            preserveAspectRatio="xMidYMid slice"
+          />
+        </svg>
+        <!-- END: SVG-Trapezbild mit abgerundeten Ecken -->
+      </figure>
+      <div
+        id="divButtons"
+        class="absolute flex items-center"
+        style="
+          width: 164.44px;
+          height: 73.33px;
+          left: 717.78px;
+          top: 784.44px;
+          opacity: 1;
+          gap: 17.78px;
+        "
+      >
+        <button
+          class="w-12 h-12 rounded-full bg-transparent border border-white flex items-center justify-center"
+          aria-label="Zurück"
+        >
+          <img
+            src="./icons_forms/button_arrow-left-Icon.svg"
+            alt="Pfeil links"
+            class="w-5 h-5"
+          />
+        </button>
+        <button
+          class="w-12 h-12 rounded-full bg-transparent border border-white flex items-center justify-center"
+          aria-label="Weiter"
+        >
+          <img
+            src="./icons_forms/button_arrow-right-Icon.svg"
+            alt="Pfeil rechts"
+            class="w-5 h-5"
+          />
+        </button>
+      </div>
+    </section>
+    <!-- /The Project -->
+
+    <!-- Our Quality -->
+    <section
+      class="relative bg-[#1D4734] text-white p-8 flex flex-col md:flex-row gap-8 mx-auto w-[1600px] h-[991.11px]"
+    >
+      <div class="flex flex-col w-[600px] pl-[88.89px] pt-[88.89px] z-10">
+        <div class="flex items-center gap-[26.67px] h-[122px] mb-10">
+          <div class="relative w-[122.22px] h-[122.22px]">
+            <img
+              src="./icons_forms/circleLabel_Ellipse_3.svg"
+              alt="Ellipse-3"
+              class="absolute top-[11.11px] left-0 w-[111.11px] h-[111.11px]"
+            />
+            <img
+              src="./icons_forms/circleLabel_Ellipse_4.svg"
+              alt="Ellipse-4"
+              class="absolute top-0 left-[11.11px] w-[111.11px] h-[111.11px]"
+            />
+            <img
+              src="./icons_forms/circleLabel_Star_3.svg"
+              alt="Stern-in-Ellipsen"
+              class="absolute top-[8.89px] left-[8.89px] w-[27.88px] h-[28.21px]"
+            />
+          </div>
+          <div
+            class="font-[Satoshi] font-medium text-[44.44px] leading-[120%] tracking-[0px]"
+          >
+            Our Quality
+          </div>
+        </div>
+        <div class="mb-6 mt-16">
+          <h2
+            class="font-[Satoshi] font-bold text-[48px] leading-[1.1] tracking-[-0.5px] text-white mb-4"
+          >
+            DESIGN A <span class="text-[#B6CFC1]">COZY</span><br />AND FRESH<br />INTERIOR.
+          </h2>
+          <p
+            class="text-[18px] text-[#B6CFC1] font-[Satoshi] mb-16 max-w-[420px]"
+          >
+            Crafting an Inviting Haven: Unveiling the Art of Designing a Cozy
+            and Fresh Interior for Unmatched Comfort and Serenity
+          </p>
+          <button
+            style="
+              width: 178.89px;
+              height: 61px;
+              border-radius: 111.11px;
+              background: #e09b6b;
+              color: #222;
+              font-family: 'Satoshi', sans-serif;
+              font-weight: 700;
+              font-size: 20px;
+              padding: 20px 35.56px;
+              border: none;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              gap: 11.11px;
+            "
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+
+      <!-- Rechte Seite: Maskierte Kreise und Pfeil-Button -->
+      <div class="relative flex-1 flex items-center justify-center">
+        <!-- Großer Kreis (Bild) -->
+        <div
+          style="
+            position: relative;
+            width: 632.22px;
+            height: 698.89px;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 2;
+            box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.18);
+            background: #fff2;
+          "
+        >
+          <img
+            src="./media/beautiful-modern-kithen-in-luxury-contemporay-ho.jpg"
+            alt="Modern Kitchen"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: -320px center;
+            "
+          />
+        </div>
+        <!-- Pfeil-Button außerhalb des Kreises, absolut positioniert -->
+        <button
+          style="
+            position: absolute;
+            left: 50%;
+            top: calc(698.89px + 30px);
+            transform: translateX(-50%);
+            width: 109.77px;
+            height: 109.77px;
+            border-radius: 50%;
+            background: #e09b6b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+            z-index: 3;
+          "
+        >
+          <img
+            src="./icons_forms/background_arrowForward_Vector.svg"
+            alt="Arrow"
+            style="width: 36px; height: 36px"
+          />
+        </button>
+        <!-- Halbtransparenter Kreis im Hintergrund -->
+        <div
+          style="
+            position: absolute;
+            right: -170px;
+            top: 170px;
+            width: 547.78px;
+            height: 606.67px;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0.35;
+            filter: blur(1px);
+            background: #fff2;
+          "
+        >
+          <img
+            src="./media/modern-kitchen-of-a-modern-villa.jpg"
+            alt="Modern Villa Kitchen"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: -90px center;
+            "
+          />
+        </div>
+      </div>
+    </section>
+    <!-- /Our Quality -->
   </body>
 </html>
